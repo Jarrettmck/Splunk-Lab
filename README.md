@@ -21,29 +21,35 @@ In this Lab, I will be presenting the different ways that Splunk can analyze dat
 <p align="center">
 Go to Search and Reporting and input the query or URL of the scanned incident. <br/>
   <br />
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="Screenshot 2025-05-22 161347.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Look through the Sourcetypes used:  <br/>
+<img src="Screenshot 2025-05-22 161552.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Find the source IP with the highest data usage for that source type: <br/>
+<img src="Screenshot 2025-05-22 161658.png" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Find the CVE Value of the Alert through NIST which shows you the decription, solutions, and tools for the alert. (fromm Alert Signature)  <br/>
+<img src="Screenshot 2025-05-22 162008.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="Screenshot 2025-05-22 162145.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Track down the IP responsible by following up in the search bar with IP and show the raw text. You can also show and print your findings in chart form by going to statistics, then to visualization. <br/>
+<img src="Screenshot 2025-05-22 164356.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+With finding that IP you can type http_method=POST to see the post request percentage:  <br/>
+<img src="Screenshot 2025-05-22 165527.png"80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Use |table_time uri src_ip dest_ip form_data to create a table containing important fields. To only show username and password data that the attacker used add- form_data=*username*passwd*:  <br/>
+<img src="Screenshot 2025-05-22 170222.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+For regex or rex, use input rex field=form_data"password=(?<creds>\wt) to extract password values only used by the attacker:<br/>>
+<br />
+<img src="Screenshot 2025-05-22 172134.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
