@@ -25,23 +25,28 @@ Go to Search and Reporting and input the query or URL of the scanned incident. <
 <br />
 <br />
 Look through the Sourcetypes used:  <br/>
+<br />
 <img src="Screenshot 2025-05-22 161552.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Find the source IP with the highest data usage for that source type: <br/>
+<br />
 <img src="Screenshot 2025-05-22 161658.png" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Find the CVE Value of the Alert through NIST which shows you the decription, solutions, and tools for the alert. (fromm Alert Signature)  <br/>
+<br />
 <img src="Screenshot 2025-05-22 162008.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="Screenshot 2025-05-22 162145.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Track down the IP responsible by following up in the search bar with IP and show the raw text. You can also show and print your findings in chart form by going to statistics, then to visualization. <br/>
+<br />
 <img src="Screenshot 2025-05-22 164356.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 With finding that IP you can type http_method=POST to see the post request percentage:  <br/>
+<br />
 <img src="Screenshot 2025-05-22 165527.png"80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
