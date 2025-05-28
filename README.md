@@ -19,7 +19,8 @@ In this Lab, I will be presenting the different ways that Splunk can analyze dat
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
+Go to Search and Reporting and input the query or URL of the scanned incident. <br/>
+  <br />
 <img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
